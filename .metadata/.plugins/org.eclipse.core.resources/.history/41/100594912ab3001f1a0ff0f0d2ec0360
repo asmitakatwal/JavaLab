@@ -1,0 +1,71 @@
+package GUIApplications;
+
+import javax.swing.*;
+import java.awt.*;
+//import java.awt.event.*;
+
+public class TextEditorApp {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new TextEditor());
+    }
+}
+
+class TextEditorApp extends JFrame {
+    private JTextArea textArea;
+
+    public TextEditor() {
+        // Set up the frame
+        setTitle("Text Editor");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Center the frame
+        setLayout(new BorderLayout());
+
+        // Create a text area
+        textArea = new JTextArea();
+        add(new JScrollPane(textArea), BorderLayout.CENTER);
+
+        // Create a menu bar
+        JMenuBar menuBar = new JMenuBar();
+
+        // Create a menu
+        JMenu editMenu = new JMenu("Edit");
+
+        // Create menu items
+        JMenuItem selectAll = new JMenuItem("Select All");
+        JMenuItem cut = new JMenuItem("Cut");
+        JMenuItem copy = new JMenuItem("Copy");
+        JMenuItem paste = new JMenuItem("Paste");
+        JMenuItem exit = new JMenuItem("Exit");
+
+        // Add menu items to menu
+        editMenu.add(selectAll);
+        editMenu.add(cut);
+        editMenu.add(copy);
+        editMenu.add(paste);
+        editMenu.addSeparator(); // Adds a separator line
+        editMenu.add(exit);
+
+        // Add menu to menu bar
+        menuBar.add(editMenu);
+
+        // Set menu bar to frame
+        setJMenuBar(menuBar);
+
+        // Add functionality to menu items
+        selectAll.addActionListener(e -> textArea.selectAll());
+        
+        cut.addActionListener(e -> textArea.cut());
+        
+        copy.addActionListener(e -> textArea.copy());
+        
+        paste.addActionListener(e -> textArea.paste());
+        
+        exit.addActionListener(e -> System.exit(0));
+
+        // Make frame visible
+        setVisible(true);
+    }
+}
+

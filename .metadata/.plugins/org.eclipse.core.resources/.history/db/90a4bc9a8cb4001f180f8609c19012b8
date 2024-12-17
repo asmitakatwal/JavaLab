@@ -1,0 +1,12 @@
+package aWTExample;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MouseEvent implements MouseListener{
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

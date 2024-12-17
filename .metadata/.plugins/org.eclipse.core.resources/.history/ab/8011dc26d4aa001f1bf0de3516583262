@@ -1,0 +1,20 @@
+package GUIControls;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class CUIControlsPractice {
+
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("Registration Form");
+		frame.setSize(400,400);
+		frame.setLayout(new FlowLayout());
+		frame.setVisible(true);
+		JLabel label=new JLabel("enter teat here");
+		JButton button=new JButton("Clicke me");
+		frame.add(label);
+		frame.add(button);
+		
+	}
+
+}

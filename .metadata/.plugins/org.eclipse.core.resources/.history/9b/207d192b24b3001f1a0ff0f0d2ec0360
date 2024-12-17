@@ -1,0 +1,48 @@
+package GUIApplications;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Question1 {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Box frame = new Box();
+            frame.setVisible(true);
+        });
+    }
+
+    static class Box extends JFrame {
+        private static final long serialVersionUID = 1L; // Fix the warning
+
+        JButton one = new JButton("Btn 1");
+        JButton two = new JButton("Btn 2");
+        JButton three = new JButton("long named Btn 3");
+        JButton four = new JButton("Btn 4");
+        JButton five = new JButton("Btn 5");
+
+        public Box() {
+            // Set frame properties
+            setTitle("Button Alignment Example");
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setSize(400, 300);
+            setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+
+            // Align buttons
+            one.setAlignmentX(Component.CENTER_ALIGNMENT);
+            two.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+            // Panel for three and horizontally aligned four, five
+            JPanel panel = new JPanel();
+            panel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 0));
+            panel.add(three);
+            panel.add(four);
+            panel.add(five);
+
+            // Add buttons to the frame
+            add(one);
+            add(two);
+            add(panel);  // Adding the custom panel to frame
+        }
+    }
+}

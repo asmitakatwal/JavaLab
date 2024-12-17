@@ -1,0 +1,55 @@
+package GUIApplications;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Question1 {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Box frame = new Box();
+            frame.setVisible(true);
+        });
+    }
+
+    static class Box extends JFrame {
+        private static final long serialVersionUID = 1L;
+
+        JButton one = new JButton("Btn 1");
+        JButton two = new JButton("Btn 2");
+        JButton three = new JButton("Btn 3");
+        JButton four = new JButton("Btn 4");
+        JButton five = new JButton("Btn 5");
+
+        public Box() {
+            // Set frame properties
+            setTitle("Button Alignment Example");
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setSize(400, 500);
+            setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+
+            // Set alignment for all buttons
+            one.setAlignmentX(Component.CENTER_ALIGNMENT);
+            two.setAlignmentX(Component.CENTER_ALIGNMENT);
+            three.setAlignmentX(Component.CENTER_ALIGNMENT);
+            four.setAlignmentX(Component.CENTER_ALIGNMENT);
+            five.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+            // Make Btn 4 wider
+            four.setMaximumSize(new Dimension(300, 40)); // Set preferred width
+            four.setPreferredSize(new Dimension(300, 40));
+
+            // Add buttons to the frame
+            add(Box.createVerticalStrut(10)); // Add spacing
+            add(one);
+            add(Box.createVerticalStrut(10)); // Add spacing
+            add(two);
+            add(Box.createVerticalStrut(10)); // Add spacing
+            add(three);
+            add(Box.createVerticalStrut(10)); // Add spacing
+            add(four);
+            add(Box.createVerticalStrut(10)); // Add spacing
+            add(five);
+        }
+    }
+}

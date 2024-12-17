@@ -1,0 +1,20 @@
+package GUIControls;
+import javax.swing.*;
+import java.awt.*;
+
+public class GUIControlsExample{
+	public static void main(String[] args) {
+		JFrame frame =new JFrame("This is frame");
+		JButton button=new JButton("Click me");
+		JTextField textfield=new JTextField("Enter here");
+		
+		frame.add(frame);
+		frame.add(button);
+		frame.add(textfield);
+		
+		frame.setLayout(new FlowLayout());
+		frame.setSize(400,400);
+		frame.setVisible(true);
+	}
+}
+

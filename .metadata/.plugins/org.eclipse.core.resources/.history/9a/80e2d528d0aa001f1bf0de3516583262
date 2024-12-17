@@ -1,0 +1,23 @@
+package GUIControls;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class GUIControlsExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Controls Example");
+
+        JTextField textField = new JTextField("Type here...");
+        JCheckBox checkBox = new JCheckBox("I agree");
+        JButton button = new JButton("Submit");
+
+        frame.add(textField);
+        frame.add(checkBox);
+        frame.add(button);
+
+        frame.setLayout(new FlowLayout());
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+    }
+}
+

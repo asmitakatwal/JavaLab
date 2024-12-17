@@ -1,0 +1,34 @@
+package nestedStaticClass;
+
+public class NestedStaticClass 
+{
+	static String staticMsg="I am a static member of outer class";
+	String instanceMsg="I am not static member of outer class";
+	
+	static void staticMethod() 
+	{
+		System.out.println("This is a static method of outer class");
+	}
+	void instanceMethod()
+	{
+		System.out.println("This is non static method of outer class");
+	}
+
+	static class staticNestedCLass
+	{
+		void display()
+		{
+			System.out.println(staticMsg);
+		}
+		//staticMethod();
+	}
+
+	public static void main(String[] args) 
+	{
+		
+	NestedStaticClass.staticNestedCLass nestedStaticClass=new NestedStaticClass.staticNestedCLass();
+		
+	nestedStaticClass.display();
+	}
+
+

@@ -1,0 +1,32 @@
+package aWTExample;
+import java.awt.*;
+import java.awt.event.*;
+
+public class FocusEventExample implements FocusListener{
+Frame frame;
+TextField txt;
+public FocusEventExample() {
+	frame=new Frame("Focus event");
+	txt=new TextField("enter");
+	txt.addFocusListener(this);
+	frame.addWindowListener(new WindowAdapter() {
+		public void windowClosing(WindowEvent e) {
+			System.out.println("Window is closed");
+			System.exit(0);
+		}
+	});
+frame.add(txt);
+frame.setVisible(true);
+}
+public void focusGained(FocusEvent e) {
+	System.out.println("Focus ganed");
+}
+public void focusLost(FocusEvent e) {
+	System.out.println("Focus ganed");
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+new FocusEventExample();
+	}
+
+}

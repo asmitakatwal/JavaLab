@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class awtButtonExample {
+    public static void main(String[] args) {
+        // Create a frame
+        Frame frame = new Frame("AWT Button Click Example");
+
+        // Create a button
+        Button button = new Button("Click Me");
+
+        // Create a label
+        Label label = new Label("Button not clicked");
+
+        // Set button click action
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Button clicked!");
+            }
+        });
+
+        // Layout
+        frame.setLayout(new FlowLayout());
+        frame.add(button);
+        frame.add(label);
+
+        // Set the size and make it visible
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+
+        // Close the window on clicking the close button
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+}

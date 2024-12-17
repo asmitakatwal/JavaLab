@@ -1,0 +1,40 @@
+package aWTExample;
+import java.awt.*;
+
+import javax.swing.*;
+
+/*
+ * public class awtButtonExample { public static void main(String[] args) { //
+ * Create a frame Frame frame = new Frame("AWT Button Click Example");
+ * 
+ * // Create a button Button button = new Button("Click Me");
+ * 
+ * // Create a label Label label = new Label("Button not clicked");
+ * 
+ * 
+ * button.addActionListener(new ActionListener() { public void
+ * actionPerformed(ActionEvent e) { label.setText("Button clicked!"); } });
+ * 
+ * // Layout frame.setLayout(new FlowLayout()); frame.add(button);
+ * frame.add(label);
+ * 
+ * // Set the size and make it visible frame.setSize(300, 200);
+ * frame.setVisible(true);
+ * 
+ * 
+ * frame.addWindowListener(new WindowAdapter() { public void
+ * windowClosing(WindowEvent we) { System.exit(0); } }); } }
+ */
+
+public class awtButtonExample{
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("Frame example");
+		Label label=new Label("Hello");
+		TextField textfield=new TextField("text here");
+		frame.setLayout(new FlowLayout());
+		frame.add(label);
+		frame.add(textfield);
+		frame.setSize(300,400);
+		frame.setVisible(true);
+	}
+}

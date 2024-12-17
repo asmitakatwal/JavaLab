@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module JavaProject {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+}

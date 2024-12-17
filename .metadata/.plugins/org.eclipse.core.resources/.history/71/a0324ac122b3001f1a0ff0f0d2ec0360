@@ -1,0 +1,46 @@
+package GUIApplications;
+
+//public class Question1 {
+//
+//	public static void main(String[] args) {
+//		JButton one=new JButton("Btn 1");
+//		JButton two=new JButton("Bth 2");
+//		JButton three=new JButton("Btn 3");
+//		JButton four=new JButton("Btn 4");
+//		JButton five=new JButton("Btn 5");
+//		
+//
+//	}
+//
+//}
+import javax.swing.*;
+import java.awt.*;
+
+public class Question1 {
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("Button Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600, 200);
+
+        // Set a FlowLayout for the frame's content pane, center aligned
+        frame.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
+
+        // Create buttons
+        JButton btn1 = new JButton("Btn1");
+        JButton btn2 = new JButton("Btn2");
+        JButton btn3 = new JButton("Btn3");
+        JButton btn4 = new JButton("Long Named Btn 4");
+        JButton btn5 = new JButton("Btn 5");
+
+        // Add buttons to the frame in the desired order
+        frame.add(btn1);
+        frame.add(btn2);
+        frame.add(btn3);
+        frame.add(btn4);
+        frame.add(btn5);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}

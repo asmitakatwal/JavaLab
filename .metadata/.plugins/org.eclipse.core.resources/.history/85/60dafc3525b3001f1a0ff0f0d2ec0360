@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Question1 {
+
+    public static void main(String[] args) {
+        class Box extends JFrame {
+            JButton one = new JButton("Btn 1");
+            JButton two = new JButton("Btn 2");
+            JButton three = new JButton("Btn 3");
+            JButton four = new JButton("long names Btn 4");
+            JButton five = new JButton("Btn 5");
+
+            public Box() {
+                setTitle("Vertical Buttons Example");
+                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                setSize(400, 500);
+                setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+
+                // Set alignment for buttons
+                one.setAlignmentX(Component.CENTER_ALIGNMENT);
+                two.setAlignmentX(Component.CENTER_ALIGNMENT);
+                three.setAlignmentX(Component.CENTER_ALIGNMENT);
+                four.setAlignmentX(Component.CENTER_ALIGNMENT);
+                five.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+                // Adjust Btn 4 width
+                four.setMaximumSize(new Dimension(300, 40));
+                four.setPreferredSize(new Dimension(300, 40));
+
+                // Add buttons to frame
+                add(Box.createVerticalStrut(10)); // Spacing
+                add(one);
+                add(Box.createVerticalStrut(10));
+                add(two);
+                add(Box.createVerticalStrut(10));
+                add(three);
+                add(Box.createVerticalStrut(10));
+                add(four);
+                add(Box.createVerticalStrut(10));
+                add(five);
+            }
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            Box frame = new Box();
+            frame.setVisible(true);
+        });
+    }
+}

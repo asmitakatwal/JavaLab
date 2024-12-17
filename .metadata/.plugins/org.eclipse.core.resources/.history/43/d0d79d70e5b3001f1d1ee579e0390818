@@ -1,0 +1,14 @@
+package aWTExample;
+import java.awt.*;
+
+public class ClosableAwt {
+
+	public static void main(String[] args) {
+		Frame frame=new Frame("Closable frame");
+		frame.setSize(400,300);
+		frame.setLocationRelativeTo(frame);
+		frame.setVisible(true);
+
+	}
+
+}

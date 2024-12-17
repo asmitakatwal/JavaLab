@@ -1,0 +1,54 @@
+package GUIApplications;
+
+//public class Question1 {
+//
+//	public static void main(String[] args) {
+//		JButton one=new JButton("Btn 1");
+//		JButton two=new JButton("Bth 2");
+//		JButton three=new JButton("Btn 3");
+//		JButton four=new JButton("Btn 4");
+//		JButton five=new JButton("Btn 5");
+//		
+//
+//	}
+//
+//}
+import javax.swing.*;
+import java.awt.*;
+
+public class ButtonLayoutExample {
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("Button Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+
+        // Panel for btn1
+        JPanel panel1 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JButton btn1 = new JButton("Btn1");
+        panel1.add(btn1);
+
+        // Panel for btn2
+        JPanel panel2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JButton btn2 = new JButton("Btn2");
+        panel2.add(btn2);
+
+        // Panel for btn3, btn4, and btn5
+        JPanel panel3 = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JButton btn3 = new JButton("Btn3");
+        JButton btn4 = new JButton("Long Named Btn 4");
+        JButton btn5 = new JButton("Btn 5");
+        panel3.add(btn3);
+        panel3.add(btn4);
+        panel3.add(btn5);
+
+        // Add panels to frame
+        frame.add(panel1);
+        frame.add(panel2);
+        frame.add(panel3);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}

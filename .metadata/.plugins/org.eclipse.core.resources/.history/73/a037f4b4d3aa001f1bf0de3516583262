@@ -1,0 +1,17 @@
+package GUIControls;
+
+import javax.swing.*;
+
+public class CUIControlsPractice {
+
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("Registration Form");
+		frame.setSize(400,400);
+		frame.setLayout(new FlowLayout());
+		frame.setVisible(true);
+		JLabel label=new JLabel("enter teat here");
+		frame.add(label);
+		
+	}
+
+}

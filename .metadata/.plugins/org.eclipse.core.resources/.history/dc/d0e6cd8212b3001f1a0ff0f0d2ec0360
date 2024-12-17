@@ -1,0 +1,32 @@
+package eventHandling;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("COlor frame");
+		
+		JButton redbutton=new JButton();
+		JButton greenbutton=new JButton();
+		JButton bluebutton=new JButton();
+		
+		frame.add(redbutton);
+		frame.add(greenbutton);
+		frame.add(bluebutton);
+		
+		frame.setSize(400,400);
+		frame.setLayout(new FlowLayout());
+		
+		redbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.getContentPane().setBackground(Color.RED);
+				}
+		});
+		
+
+	}
+
+}
